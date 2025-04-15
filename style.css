@@ -23,23 +23,37 @@ img.logo-web {
   grid-template-columns: repeat(3, 1fr);
 }
 .instr img {
-  max-width: 300px;
+  max-width: 200px;
 }
 /* piano */
+#instrument {
+  height: 100vh;
+}
 .piano {
   position: relative;
   max-width: 1200px;
+  height: 100%;
+  max-height: 250px;
 }
 .white-keys {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
+  height: 100%;
 }
 .black-keys {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60%;
 }
 .key {
   border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 .key.black-key {
   background-color: black;
