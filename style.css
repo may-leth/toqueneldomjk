@@ -7,13 +7,28 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.nav-active {
+  background-color: #A257AA;
+  color: white;
+}
 img.logo-web {
   max-width: 125px;
 }
 .nav a {
   text-decoration: none;
   color: #000;
+  float: left;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  line-height: 25px;
 }
+.nav a:hover {
+  background-color: #E6B7E5;
+  color: black
+}
+.nav a
 .home-container section {
   height: 100vh;
 }
