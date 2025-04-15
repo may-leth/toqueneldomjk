@@ -8,8 +8,40 @@ body {
   justify-content: space-between;
 }
 img.logo-web {
-  max-width: 200px;
+  max-width: 125px;
+}
+.nav a {
+  text-decoration: none;
+  color: #000;
 }
 .home-container section {
   height: 100vh;
+}
+/* section - instrumentos */
+.instr-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.instr img {
+  max-width: 300px;
+}
+/* piano */
+.piano {
+  position: relative;
+  max-width: 1200px;
+}
+.white-keys {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+}
+.black-keys {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+}
+.key {
+  border: 1px solid black;
+}
+.key.black-key {
+  background-color: black;
+  color: white;
 }
