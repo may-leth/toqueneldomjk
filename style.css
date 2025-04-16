@@ -36,9 +36,11 @@ img.logo-web {
   max-height: 250px;
 }
 .white-keys {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   height: 100%;
+  z-index: 1;
 }
 .black-keys {
   display: grid;
@@ -49,19 +51,36 @@ img.logo-web {
   height: 60%;
   width: 100%;
   gap: 10px;
+  z-index: 2;
+  pointer-events: none;
 }
 .key {
-  border: 1px solid black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  pointer-events: auto;
+}
+.key.white-key {
+  border: 1px solid #aaa;
 }
 .key.black-key {
+  /* border: 1px solid black; */
   background-color: black;
   color: white;
   transform: translateX(60%);
   position: relative;
+}
+.key p {
+  margin: 0;
+}
+.key.click {
+  background-color: #aaa;
+  transform: translateY(5px);
+  margin-top: -5px;
+}
+.key.black-key.click {
+  transform: translate(60%, 5px);
 }
