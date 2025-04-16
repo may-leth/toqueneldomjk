@@ -10,9 +10,15 @@
     <header>
         <div class="nav-bar">
             <img src="/assets/img/logo-negra.png" alt="" srcset="" class="logo-web">
-            <nav class="nav">
+            <div class="lineas-menu" onclick="toggleMenu(this)">
+                <div class="linea1"></div>
+                <div class="linea2"></div>
+                <div class="linea3"></div>
+            </div>
+        <div nav id="menu" class="nav">
+            <nav href="#inicio">
                 <a href="/index.html">Home</a>
-                <a href="#instrument">Instrumento</a>
+                <a class="menu-active" href="#instrument">Instrumento</a>
                 <a href="#doc">Documentación</a>
                 <a href="#videos">Videotutoriales</a>
             </nav>
