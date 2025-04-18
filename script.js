@@ -53,7 +53,9 @@ function stopNote(note) {
   // aplica el release que le decimos en sampler
   sampler.triggerRelease(note);
 }
-// conectamos piano con teclado del ordenador y ratón: seleccionamos todas las teclas del piano
+// conectamos piano con teclado del ordenador y ratón:
+// 1. ratón
+// seleccionamos todas las teclas del piano
 document.querySelectorAll(".key").forEach((key) => {
   //   console.log(key);
   const note = key.dataset.note; // del elemento key entramos al dataset y guardamos el valor de la nota (ejemplo C3)
@@ -61,8 +63,10 @@ document.querySelectorAll(".key").forEach((key) => {
   // creamos los event listener
   // mousedown: cuando hacemos click
   key.addEventListener("mousedown", () => {
+    // activamos el audio y tocamos la nota
     startAudio();
     playNote(note);
+    // visualmente que se note que tocamos la tecla del piano
     key.classList.add("click");
   });
   // mouseup: cuando dejamos de hacer click
@@ -75,4 +79,68 @@ document.querySelectorAll(".key").forEach((key) => {
     stopNote(note);
     key.classList.remove("click");
   });
+});
+
+// 2. teclado
+const keyboardMap = {
+  // blancas octava 3
+  z: "C3",
+  x: "D3",
+  c: "E3",
+  v: "F3",
+  b: "G3",
+  n: "A3",
+  m: "B3",
+
+  // negras octava 3
+  s: "C#3",
+  d: "D#3",
+  g: "F#3",
+  h: "G#3",
+  j: "A#3",
+
+  // blancas octava 4
+  r: "C4",
+  t: "D4",
+  y: "E4",
+  u: "F4",
+  i: "G4",
+  o: "A4",
+  p: "B4",
+
+  // negras octava 4
+  5: "C#4",
+  6: "D#4",
+  8: "F#4",
+  9: "G#4",
+  0: "A#4",
+};
+
+document.addEventListener("keydown", (e) => {
+  // evitamos que se escuche muchas veces cuando mantenemos apretada una tecla
+  if (e.repeat) return;
+  // capturamos la tecla apretada y buscamos su correspondencia con las notas
+  // la pasamos a minúscula
+  const keyPressed = e.key.toLowerCase();
+  const note = keyboardMap[keyPressed];
+  if (note) {
+    // activamos el audio y tocamos la nota
+    startAudio();
+    playNote(note);
+    // visualmente que se note que tocamos la tecla del piano
+    const keyPressedClass = document.querySelector(`[data-note="${note}"]`);
+    keyPressedClass.classList.add("click");
+  }
+});
+document.addEventListener("keyup", (e) => {
+  // capturamos la tecla apretada y buscamos su correspondencia con las notas
+  const keyPressed = e.key.toLowerCase();
+  const note = keyboardMap[keyPressed];
+  if (note) {
+    // paramos la nota
+    stopNote(note);
+    // visualmente quitamos que se vea la nota tocada
+    const keyPressedClass = document.querySelector(`[data-note="${note}"]`);
+    keyPressedClass.classList.remove("click");
+  }
 });
