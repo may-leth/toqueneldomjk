@@ -105,6 +105,8 @@ img.logo-web {
   top: 0;
   left: 0;
   height: 60%;
+  width: 100%;
+  gap: 10px;
 }
 .key {
   border: 1px solid black;
@@ -112,8 +114,12 @@ img.logo-web {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .key.black-key {
   background-color: black;
   color: white;
+  transform: translateX(60%);
+  position: relative;
 }
