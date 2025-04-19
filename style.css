@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   scroll-behavior: smooth;
 }
@@ -10,6 +13,7 @@ body {
   z-index: 10;
   display: inline-block;
   cursor: pointer;
+  margin-left: 20px;
 }
 .linea1, .linea2, .linea3 {
   width: 35px;
@@ -18,20 +22,31 @@ body {
   margin: 6px 0;
   transition: 0.4s;
 }
-.change .linea1 {transform: translate(0, 11px) rotate(-45deg);}
-.change .linea2 {opacity: 0;}
-.change .linea3 {transform: translate(0, -11px) rotate(45deg);}
+.change .linea1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .linea2 {
+  opacity: 0;
+}
+.change .linea3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
 .nav {
   display: none;
-  flex-direction: row;
   background-color: white;
-  padding: 10px;
-  position: absolute;
-  right: 50px;
+  padding: 20px;
+  align-items: center;
+  position:relative;
+  margin-right: 30px;
+  /* background: linear-gradient(45deg, #A257AA, #E6B7E5); */
 }
 .nav.active {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 .menu-active{
   background-color: #A257AA;
@@ -45,6 +60,8 @@ body {
 }
 img.logo-web {
   max-width: 125px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .nav a {
   text-decoration: none;
@@ -55,24 +72,54 @@ img.logo-web {
   font-size: 18px;
   border-radius: 20px;
   line-height: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .nav a:hover {
   background-color: #E6B7E5;
-  color: black
+  color: black;
+  transform: scale(1.1);
 }
-.nav a
 .home-container section {
   height: 100vh;
 }
 /* VERIFICAR */
-@media screen and (max-with: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .header-right {
-    float: none;
+  .lineas-menu {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  img.logo-web {
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-bar {
+    padding: 10px;
+  }
+  .lineas-menu {
+    top: 10px;
+    right: 10px;
+  }
+  .nav a {
+    font-size: 16px;
+    padding: 8px;
   }
 }
 /* section - instrumentos */
