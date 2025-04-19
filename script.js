@@ -1,3 +1,4 @@
+//Funcion para desplegar menu
 function toggleMenu(element) {
     const menu = document.getElementById("menu");
     console.log("toggleMenu se activó") // mensaje de prueba 

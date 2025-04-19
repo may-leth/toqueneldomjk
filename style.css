@@ -170,3 +170,50 @@ img.logo-web {
   transform: translateX(60%);
   position: relative;
 }
+
+/* FAQ  */
+#faq {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+details {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #A257AA;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+summary:hover {
+  background-color: #f0f0f0;
+}
+summary::before {
+  content: "+";
+  font-weight: bold;
+  color: #A257AA;
+  margin-right: 10px;
+}
+details[open] summary::before {
+  content: "-";
+}
+details p {
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+}
