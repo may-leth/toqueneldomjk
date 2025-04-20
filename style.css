@@ -5,6 +5,13 @@ body {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
+/* titulos */
+.playfair-display-400 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /* header */
 .lineas-menu {
   position: absolute;
@@ -16,7 +23,9 @@ body {
   cursor: pointer;
   margin-left: 20px;
 }
-.linea1, .linea2, .linea3 {
+.linea1,
+.linea2,
+.linea3 {
   width: 25px;
   height: 4px;
   background-color: black;
@@ -37,7 +46,7 @@ body {
   background-color: white;
   padding: 20px;
   align-items: center;
-  position:relative;
+  position: relative;
   margin-right: 40px;
   /* background: linear-gradient(45deg, #A257AA, #E6B7E5); */
 }
@@ -49,15 +58,15 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.menu-active{
-  background-color: #A257AA;
+.menu-active {
+  background-color: #a257aa;
 }
 .nav-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
 }
 img.logo-web {
   max-width: 125px;
@@ -77,12 +86,9 @@ img.logo-web {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .nav a:hover {
-  background-color: #E6B7E5;
+  background-color: #e6b7e5;
   color: black;
   transform: scale(1.1);
-}
-.home-container section {
-  height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .nav-bar {
@@ -127,12 +133,72 @@ img.logo-web {
   }
 }
 /* section - instrumentos */
+.title {
+  font-size: 30px;
+  padding-block: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 20px;
+    padding-block: 1rem;
+  }
+}
 .instr-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  place-items: center;
 }
 .instr img {
-  max-width: 200px;
+  max-width: 160px;
+  z-index: 2;
+}
+.instr {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+.instr:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.instr a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+  cursor: pointer;
+}
+.instr a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(221, 107, 192, 0.7) 0%,
+    rgba(148, 117, 228, 0.4) 50%,
+    rgba(173, 216, 230, 0.2) 100%
+  );
+  filter: blur(100px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.instr a:hover::after {
+  opacity: 1;
 }
 /* piano */
 .piano {
@@ -295,7 +361,7 @@ summary {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #A257AA;
+  color: #a257aa;
   border-radius: 8px;
   display: flex;
   flex-direction: row-reverse;
@@ -310,7 +376,7 @@ summary:hover {
 summary::before {
   content: "+";
   font-weight: bold;
-  color: #A257AA;
+  color: #a257aa;
   margin-right: 10px;
 }
 details[open] summary::before {
