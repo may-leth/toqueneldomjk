@@ -267,6 +267,7 @@ img.logo-web {
   gap: 10px;
   padding: 20px;
   margin: auto;
+  cursor: url("/assets/img/marimba-palo.png") 16 16, auto;
 }
 /* Mocha (claras) */
 .mocha-keys {
