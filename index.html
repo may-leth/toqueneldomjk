@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos-extra.css">
+
 </head>
 <body>
     <header>
@@ -33,7 +35,22 @@
     <h1>Toquen el DOM 🎹</h1>
     <main class="home-container">
         <section id="inicio">
-            <h2>Seccion de inicio</h2>
+            <p>Somos una escuela de música moderna con un enfoque creativo, accesible y personalizado. Aquí no solo enseñamos notas y acordes: ¡despertamos tu pasión por la música!</p>
+    <p>Nuestros cursos están pensados para todas las edades y niveles, desde principiantes curiosos hasta músicos en formación profesional. Aprende a tu ritmo, acompañado de profesores apasionados y con experiencia.</p>
+    <h3>🎵 ¿Qué puedes aprender con nosotros?</h3>
+    <ul class="clases-lista">
+      <li>🎹 Piano clásico y moderno, Marimba</li>
+      <li>🥁 Batería y percusión</li>
+      <li>🎸 Guitarra acústica y eléctrica</li>
+      <li>🎤 Canto y técnica vocal</li>
+      <li>🎼 Violín y lenguaje musical</li>
+      <li>🧠 Armonía, improvisación y composición</li>
+    </ul>
+    <p>Explora, siente y toca la música con nosotros. Tu viaje musical empieza hoy.</p>
+    <p>¡Bienvenido a la familia de <strong>Toquen el DOM</strong>!</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
         <section id="instrumentos">
             <h2 class="title playfair-display-400">Selecciona el instrumento</h2>
@@ -55,10 +72,80 @@
                 </div>
             </div>
         </section>
-        <section id="aboutus">
-            <h2 class="title playfair-display-400">Sobre la escuela</h2>
+            <section id="aboutus" class="aboutus-section">
+            <h2>Sobre la escuela</h2>
+            <section id="aboutus" class="aboutus-section fade-in">
+    <p>
+      En <strong>Toquen el DOM</strong> creemos que la música es para todos. Fundada por músicos y docentes apasionados,
+      nuestra escuela ofrece un espacio inclusivo y moderno donde puedes explorar, aprender y crecer musicalmente,
+      sin importar tu nivel.
+    </p>
+
+    <p>
+      Combinamos la enseñanza tradicional con herramientas tecnológicas para que cada clase sea interactiva, divertida y personalizada.
+      Nuestro equipo docente está formado por músicos profesionales, con experiencia en escenarios reales y en el aula.
+    </p>
+
+    <div class="mision-vision">
+      <div class="card">
+        <h3><i class="fas fa-bullseye"></i> Misión</h3>
+        <p>Despertar la creatividad musical en cada estudiante, promoviendo el aprendizaje activo, la expresión personal y la conexión con la música.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-eye"></i> Visión</h3>
+        <p>Ser un referente en educación musical innovadora y accesible, donde los alumnos no solo aprenden, sino que se inspiran.</p>
+      </div>
+    </div>
+
+    <div class="valores">
+      <h3><i class="fas fa-star"></i> Nuestros Valores</h3>
+      <ul>
+        <li><i class="fas fa-heart"></i> Pasión por enseñar y aprender</li>
+        <li><i class="fas fa-users"></i> Comunidad y colaboración</li>
+        <li><i class="fas fa-lightbulb"></i> Creatividad e innovación</li>
+        <li><i class="fas fa-music"></i> Amor por la música en todas sus formas</li>
+      </ul>
+    </div>
+  </div>
+</section>
         </section>
-        <section id="profesores"></section>
+
+        </section>
+        <section id="profesores">
+           <section id="profesores" class="profesores-section">
+  <h2 class="title playfair-display-400">Nuestros Profesores</h2>
+  <div class="profes-container">
+    <div class="card">
+      <img src="assets/img/2149613748 (1).jpg" alt="Miranda Martínez - Profesora de Piano" class="card-img">
+      <h3>Miranda Martínez</h3>
+      <p class="title">Profesora de Piano</p>
+      <p>Especialista en piano clásico y moderno. Más de 10 años de experiencia enseñando.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/143511.jpg" alt="Xabi López - Profesor de Guitarra" class="card-img">
+      <h3>Xabi López</h3>
+      <p class="title">Profesor de Guitarra</p>
+      <p>Guitarrista, compositor y experto en armonía moderna.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/2148006500.jpg" alt="Atenea Mercado - Profesora de Violín" class="card-img">
+      <h3>Atenea Mercado</h3>
+      <p class="title">Profesora de Violín</p>
+      <p>Nació en nuestra escuela y comparte su pasión desde hace 4 años.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/2149215533.jpg" alt="Julien Montecristo - Profesor de Canto" class="card-img">
+      <h3>Julien Montecristo</h3>
+      <p class="title">Profesor de Canto</p>
+      <p>Vocalista y compositor con más de 8 años de experiencia.</p>
+    </div>
+  </div>
+</section>
+
+        </section>
         <section id="galeria"></section>
         <div class="faq-container">
         <section id="faq">
@@ -104,7 +191,26 @@
             </div>
         </div>
         </section>
-        <section id="contacto"></section>
+        <section id="contacto">
+            <h2 class="title playfair-display-400">Contacto</h2>
+            <div class="contact-container">
+                <form action="" method="post" class="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><strong>Email:</strong> info@toqueneldom.com
+                    <p>Teléfono: +34 123 456 789</p>
+                <p>Dirección: Calle de la Música, 123, Valencia</p>
+                <p>Horario: Lunes a Viernes, 10:00 - 20:00</p>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
