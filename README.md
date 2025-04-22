@@ -7,7 +7,7 @@ Toquen el DOM es una aplicación web interactiva para una <b>escuela de música 
 <br><br>
 
 <h3>/// 2. Características Principales:</h3>
-<b>De uno a tres instrumentos</b> con <b>sonidos realistas</b><br>
+<b>Tres instrumentos</b> con <b>sonidos realistas</b><br>
 Interacción dual <b>(teclado físico + mouse)</b>
 
 <b>Animaciones</b> visuales al tocar<br>
@@ -28,7 +28,7 @@ Fácil despliegue con <b>Docker</b>
 <h3>/// 4. Requerimientos Técnicos</h3>
 
 ✅ <b>GitFlow</b> para gestión de versiones<br>
-✅ De uno à tres instrumentos: <b>Piano, Marimba y Batería</b><br>
+✅ Tres instrumentos: <b>Piano, Marimba y Batería</b><br>
 ✅ Interacción con <b>mouse y teclado</b><br>
 ✅ <b>Sonidos realistas</b> y sincronizados<br>
 ✅ <b>Animaciones</b> al tocar<br>
@@ -38,7 +38,6 @@ Fácil despliegue con <b>Docker</b>
 <b>Bonus track </b> 🌟<br>
 Diseño responsive<br>
 Documentación de uso<br>
-Tutoriales interactivos
 <br><br>
 
 <h3>/// 5. Vistas Principales:</h3>
