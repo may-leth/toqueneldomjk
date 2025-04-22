@@ -3,10 +3,9 @@
   background-color: #c09ad0;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  
 }
 
-#inicio h1, 
+#inicio h1,
 #inicio h3 {
   color: #ffffff;
   font-weight: bold;
@@ -20,7 +19,7 @@
 
 /* TARJETAS DE PROFESORES optimizadas */
 #profesores .card {
-  background-color: #D8BFD8;
+  background-color: #d8bfd8;
   border-radius: 16px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -85,7 +84,7 @@
 
 .contact-form input,
 .contact-form textarea {
-  border: 2px solid #D8BFD8;
+  border: 2px solid #d8bfd8;
   border-radius: 8px;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -94,7 +93,7 @@
 }
 
 .contact-form button {
-  background-color: #39FF14;
+  background-color: #39ff14;
   color: #000;
   font-weight: bold;
   padding: 0.75rem 1.5rem;
@@ -111,7 +110,6 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background: #eee;
   padding: 2rem;
 }
 /* Estilos para la bateria */

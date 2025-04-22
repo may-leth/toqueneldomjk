@@ -33,13 +33,21 @@ body {
   transition: 0.4s;
 }
 .change .linea1 {
-  transform: translate(0, 11px) rotate(-45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .change .linea2 {
   opacity: 0;
 }
 .change .linea3 {
-  transform: translate(0, -11px) rotate(45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .nav {
   display: none;
@@ -49,6 +57,13 @@ body {
   position: relative;
   margin-right: 40px;
   /* background: linear-gradient(45deg, #A257AA, #E6B7E5); */
+}
+.nav {
+  transition: all 0.4s ease;
+}
+
+.lineas-menu div {
+  transition: all 0.4s ease;
 }
 .nav.active {
   display: flex;
@@ -118,6 +133,25 @@ img.logo-web {
   img.logo-web {
     max-width: 100px;
   }
+  .nav.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 9;
+  }
+  .lineas-menu.change {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
 }
 @media screen and (max-width: 500px) {
   .nav-bar {
@@ -130,6 +164,14 @@ img.logo-web {
   .nav a {
     font-size: 16px;
     padding: 8px;
+  }
+}
+#aboutus div {
+  text-align: justify;
+}
+@media screen and (max-width: 768px) {
+  #profesores .card {
+    margin-bottom: 2rem;
   }
 }
 /* section - instrumentos */
@@ -336,7 +378,6 @@ img.logo-web {
 }
 /* FAQ  */
 .faq-container {
-  background-color: #f9f9f9;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -451,7 +492,7 @@ body {
 
 .gallery:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gallery img {
@@ -485,7 +526,7 @@ body {
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   border-radius: 50%;
@@ -498,7 +539,7 @@ body {
 }
 
 .nav-btn:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
@@ -519,12 +560,12 @@ body {
   .gallery {
     width: 250px;
   }
-  
+
   .gallery img,
   .video-container {
     height: 180px;
   }
-  
+
   .nav-btn {
     width: 35px;
     height: 35px;
@@ -536,12 +577,12 @@ body {
   .gallery {
     width: 220px;
   }
-  
+
   .gallery img,
   .video-container {
     height: 160px;
   }
-  
+
   .desc {
     padding: 10px;
     font-size: 14px;
