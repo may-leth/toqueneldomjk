@@ -672,43 +672,78 @@ body {
   }
 }
 /* Contacto */
-.contact-form label {
-  color: #222;
-  margin-top: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  border: 2px solid #d8bfd8;
-  border-radius: 8px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-form button {
-  background-color: #39ff14;
-  color: #000;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #2edc10;
-}
-
-body {
-  font-family: sans-serif;
-  text-align: center;
+#contacto {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 2rem;
+  border-radius: 10px; 
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.form-container, .map{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border-radius: 8px;
+}
+.contact-info {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.contact-form {
+  padding: 20px;
+  display: grid;
+  row-gap: 1rem;
+}
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border-radius: 0.4rem;
+  border: 2px solid #a257aa;
+}
+.contact-form textarea {
+  resize: none;
+  height: 200px;
+}
+.contact-form .send-button {
+  border: none;
+  outline: none;
+  background: #a257aa;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.send-button:hover {
+  background-color: #c09ad0;
+  transition: 0.3s all linear;
 }
 /* Estilos para la bateria */
-.drum-container {
+.drum-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
