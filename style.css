@@ -845,3 +845,31 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+/* bateria */
+.bateria {
+  position: relative;
+  width: 90vw;
+  max-width: 1000px;
+}
+.bateria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 20% 30% 20% 15%;
+  grid-template-rows: 20% 20% 30% 30%;
+}
+.hitbox {
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+}
+.hitbox:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
