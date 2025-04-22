@@ -5,6 +5,11 @@ body {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-block: 2rem;
+}
 /* titulos */
 .playfair-display-400 {
   font-family: "Playfair Display", serif;
@@ -180,6 +185,66 @@ img.logo-web {
     margin-bottom: 2rem;
   }
 }
+/*Video Background */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+  padding: 0;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-section iframe {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0px;
+}
+/* Video Background Final*/
+
 /* section - instrumentos */
 .title {
   font-size: 30px;
@@ -600,7 +665,13 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-#inicio h1,
+#inicio h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: px;
+  font-style: normal;
+}
 #inicio h3 {
   color: #ffffff;
   font-weight: bold;
