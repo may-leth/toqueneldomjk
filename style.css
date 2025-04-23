@@ -247,6 +247,7 @@ html {
 .title {
   font-size: 30px;
   padding-block: 2rem;
+  padding-inline: 1rem;
 }
 @media screen and (max-width: 500px) {
   .title {
@@ -965,7 +966,7 @@ body {
 }
 
 .aboutus-section i {
-  color: #c99c2b;
+  color: #fff;
   margin-right: 0.5rem;
 }
 /* bateria */
