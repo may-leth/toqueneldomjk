@@ -253,10 +253,10 @@
             <div class="contact-content">
                 <!-- formulario -->
                 <div class="form-container">
-                    <form action="" class="contact-form">
-                        <input type="text" placeholder="Nombre" id="name" name="name" required>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                        <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                    <form id="submit-form" class="contact-form">
+                        <input type="text" placeholder="Nombre" id="name" name="name" autocomplete="name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+                        <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" autocomplete="text-area" required></textarea>
                         <input type="submit" value="Enviar" class="send-button">
                     </form>
                 </div>
