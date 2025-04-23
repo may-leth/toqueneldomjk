@@ -50,3 +50,7 @@ function animate(pad) {
   pad.classList.add("active");
   setTimeout(() => pad.classList.remove("active"), 150);
 }
+function toggleMenu(menu) {
+  const nav = document.getElementById('menu');
+  nav.classList.toggle('active');
+}
