@@ -777,6 +777,7 @@ body {
   gap: 1.5rem;
   max-width: 960px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .form-container {
   flex: 1;
@@ -834,14 +835,31 @@ body {
   background-color: #c09ad0;
   transition: 0.3s all linear;
 }
-@media (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .contact-content {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 20rem !important;
+    flex-direction: column;
+  }
+  .form-container, .map {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .contact-info {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #contacto {
+    padding: 1.5rem;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .contact-form .send-button {
+    font-size: 0.9rem;
   }
   .map iframe {
-    height: 400px;
+    min-height: 250px;
   }
 }
 /* Estilos para la bateria */
