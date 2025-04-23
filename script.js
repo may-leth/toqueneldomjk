@@ -21,6 +21,12 @@ btn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+//funcion para enviar los datos de informacion a la consola
+document.getElementById('submit-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  console.log([...data.entries()]);
+});
 // documentación de la librería https://tonejs.github.io/
 // ejemplo: https://tonejs.github.io/examples/sampler
 // iniciamos Tone.js
