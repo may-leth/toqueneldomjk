@@ -500,6 +500,7 @@ html {
   color: white;
   border: 2px solid #9e4c1a;
   transition: transform 0.1s ease;
+  transform: translateX(60%);
 }
 .mkey.click {
   transform: translateY(5px);
