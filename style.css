@@ -261,6 +261,7 @@ html {
 .title {
   font-size: 30px;
   padding-block: 2rem;
+  padding-inline: 1rem;
 }
 @media screen and (max-width: 500px) {
   .title {
@@ -387,16 +388,16 @@ html {
 /* Documentacion */
 #doc {
   padding: 20px;
-  border: 2px solid #ddd; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  max-width: 800px; 
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
   margin: 50px auto;
 }
-.documentacion-instrumentos{
+.documentacion-instrumentos {
   font-size: 16px;
   line-height: 1.6;
-  text-align: justify; 
+  text-align: justify;
 }
 /* marimba */
 .marimba {
@@ -426,7 +427,7 @@ html {
   color: #333;
   transition: transform 0.1s ease;
 }
-/* Brown (oscuras) */ 
+/* Brown (oscuras) */
 .brown-keys {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -453,10 +454,11 @@ html {
 .mkey.black-key.click {
   transform: translate(60%, 5px);
 }
-.mocha-key, .brown-key {
+.mocha-key,
+.brown-key {
   position: relative;
 }
-/* Espacios */ 
+/* Espacios */
 .space {
   background: transparent;
   width: auto;
@@ -710,7 +712,7 @@ body {
 #profesores h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 /* Grid de tarjetas */
@@ -751,9 +753,8 @@ body {
 /* Texto dentro de la tarjeta */
 #profesores .card h3 {
   font-size: 1.2rem;
-  margin: 0.2rem 0 0.0em;
+  margin: 0.2rem 0 0em;
   font-weight: bold;
-  
 }
 
 #profesores .card .title {
@@ -767,19 +768,19 @@ body {
   font-size: 0.9rem;
   color: #444;
   line-height: 1.2;
-    margin: 0.2rem 0;
-  }
+  margin: 0.2rem 0;
+}
 
-  .profes-container .card {
-    width: 230px;
-  }
+.profes-container .card {
+  width: 230px;
+}
 
 /* Contacto */
 #contacto {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 .contact-content {
   display: flex;
@@ -796,7 +797,8 @@ body {
   flex-direction: column;
   justify-content: start;
 }
-.form-container, .map{
+.form-container,
+.map {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -824,7 +826,8 @@ body {
   display: grid;
   row-gap: 1rem;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 10px;
   border-radius: 0.4rem;
   border: 2px solid #a257aa;
@@ -850,7 +853,8 @@ body {
   .contact-content {
     flex-direction: column;
   }
-  .form-container, .map {
+  .form-container,
+  .map {
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -862,7 +866,8 @@ body {
   #contacto {
     padding: 1.5rem;
   }
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     padding: 8px;
     font-size: 0.9rem;
   }
@@ -874,7 +879,7 @@ body {
   }
 }
 /* Estilos para la bateria */
-.drum-container{
+.drum-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -950,6 +955,131 @@ body {
 }
 
 .aboutus-section i {
-  color: #c99c2b;
+  color: #fff;
   margin-right: 0.5rem;
+}
+/* bateria */
+.bateria {
+  position: relative;
+  width: 90vw;
+  max-width: 1000px;
+}
+.bateria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 20% 30% 20% 15%;
+  grid-template-rows: 20% 20% 30% 30%;
+}
+.hitbox {
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+}
+.hitbox:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.wrapper {
+  position: relative;
+  width: 60vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container-bateria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.3fr 1.1fr 0.9fr 1fr 0.7fr 1.5fr 0.5fr;
+  grid-template-rows: 0.7fr 0.4fr 0.7fr 1.5fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "div1 div2 div3 div3 div4 div4 div5"
+    "div6 div8 div10 div11 div4 div4 div5"
+    "div7 div8 div9 div9 div16 div16 div17"
+    "div12 div14 div18 div18 div19 div19 div17"
+    "div13 div14 div15 div15 div19 div19 div17";
+}
+
+.container-bateria > div {
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.div1 {
+  grid-area: div1;
+}
+.div2 {
+  grid-area: div2;
+}
+.div3 {
+  grid-area: div3;
+}
+.div6 {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  grid-area: div6;
+}
+.div7 {
+  grid-area: div7;
+}
+.div8 {
+  grid-area: div8;
+}
+.div9 {
+  grid-area: div9;
+}
+.div10 {
+  grid-area: div10;
+}
+.div11 {
+  grid-area: div11;
+}
+.div4 {
+  grid-area: div4;
+}
+.div5 {
+  grid-area: div5;
+}
+.div12 {
+  grid-area: div12;
+}
+.div13 {
+  grid-area: div13;
+}
+.div14 {
+  grid-area: div14;
+}
+.div15 {
+  grid-area: div15;
+}
+.div16 {
+  grid-area: div16;
+}
+.div17 {
+  grid-area: div17;
+}
+.div18 {
+  grid-area: div18;
+}
+.div19 {
+  grid-area: div19;
 }
