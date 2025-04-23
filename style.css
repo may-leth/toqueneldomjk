@@ -67,12 +67,10 @@ body {
   align-items: center;
   position: relative;
   margin-right: 40px;
-  /* background: linear-gradient(45deg, #A257AA, #E6B7E5); */
 }
 .nav {
   transition: all 0.4s ease;
 }
-
 .lineas-menu div {
   transition: all 0.4s ease;
 }
@@ -372,6 +370,20 @@ html {
 .key.black-key.click {
   transform: translate(60%, 5px);
 }
+/* Documentacion */
+#doc {
+  padding: 20px;
+  border: 2px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 800px; 
+  margin: 50px auto;
+}
+.documentacion-instrumentos{
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; 
+}
 /* marimba */
 .marimba {
   display: grid;
@@ -400,7 +412,7 @@ html {
   color: #333;
   transition: transform 0.1s ease;
 }
-/* Brown (oscuras) */
+/* Brown (oscuras) */ 
 .brown-keys {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -420,20 +432,29 @@ html {
   border: 2px solid #9e4c1a;
   transition: transform 0.1s ease;
 }
-.mkey:active {
-  transform: translateY(4px);
+.mkey.click {
+  transform: translateY(5px);
+  margin-top: -5px;
 }
-/* Espacios */
+.mkey.black-key.click {
+  transform: translate(60%, 5px);
+}
+.mocha-key, .brown-key {
+  position: relative;
+}
+/* Espacios */ 
 .space {
   background: transparent;
   width: auto;
   height: 110px;
+  grid-column: span 1;
 }
 /* Textos */
 .mkey p {
   margin: 0;
   font-size: 0.75rem;
   font-weight: bold;
+  pointer-events: none;
 }
 @media screen and (max-width: 600px) {
   .marimba {
@@ -812,6 +833,16 @@ body {
 .send-button:hover {
   background-color: #c09ad0;
   transition: 0.3s all linear;
+}
+@media (max-width: 700px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 20rem !important;
+  }
+  .map iframe {
+    height: 400px;
+  }
 }
 /* Estilos para la bateria */
 .drum-container{
