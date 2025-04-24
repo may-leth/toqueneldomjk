@@ -70,7 +70,7 @@ GitFlow<br><br>
 <h3>/// 8. Instalación</h3>
 <b>Opción 1:</b> Local (sin Docker)<br><br>
 Clona tu repositorio en Git con:<br>
-<code>git clone https://github.com/tu-usuario/toquen-el-dom.git</code><br>
+<code>git clone https://github.com/debsrdev/toqueneldom.git</code><br>
 <br>
 Entra en la carpeta del proyecto:<br>
 <code>cd toquen-el-dom</code><br><br>
