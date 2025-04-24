@@ -85,7 +85,7 @@
 <h4>Opción 1: Local (sin Docker)</h4>
 <ol>
   <li>Clona tu repositorio en Git con:<br><code>git clone https://github.com/debsrdev/toqueneldom.git</code></li>
-  <li>Entra en la carpeta del proyecto:<br><code>cd toquen-el-dom</code></li>
+  <li>Entra en la carpeta del proyecto:<br><code>cd toqueneldom</code></li>
   <li>Instala las dependencias necesarias:<br><code>npm install</code></li>
   <li>Inicia la aplicación:<br><code>npm start</code></li>
 </ol>
@@ -99,10 +99,10 @@ CMD ["nginx", "-g", "daemon off;"]
 </code></pre>
 
 <p>Luego, en tu terminal, construye tu imagen:</p>
-<code>docker build -t toquen-el-dom .</code>
+<code>docker build -t toqueneldom .</code>
 
 <p>Y ejecuta el contenedor:</p>
-<code>docker run -p 8080:80 toquen-el-dom</code>
+<code>docker run -p 8080:80 toqueneldom</code>
 
 <p>Después, abre tu navegador en: <br><code>http://localhost:8080</code></p>
 
