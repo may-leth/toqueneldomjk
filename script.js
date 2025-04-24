@@ -13,17 +13,20 @@ document.querySelectorAll(".nav a").forEach((link) => {
 });
 // funcion para scroll up btn
 const btn = document.querySelector(".scroll-up-btn");
-
-btn.addEventListener("click", () => {
-  document.documentElement.scrollTo({
-    top: 0,
-    behavior: "smooth",
+if (btn) {
+  btn.addEventListener("click", () => {
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
-});
-//Funcion para que el submit se haga en el formulario 
-document.getElementById("submit-form").addEventListener('submit', function(event) {
-  event.preventDefault();
-  const data = new FormData(event.target);
-  console.log([...data.entries()]);
-});
-
+}
+//Funcion para que el submit se haga en el formulario
+const form = document.getElementById("submit-form");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    console.log([...data.entries()]);
+  });
+}

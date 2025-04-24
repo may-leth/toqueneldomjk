@@ -220,19 +220,27 @@ html {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100%;
-  padding: 0;
+  height: 100vh;
+  overflow: hidden;
 }
+
 .hero-section iframe {
-  padding: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 177.77vh;
-  height: 100vh;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1;
+  /* default: móvil (pantalla alta) */
+  width: 177.77vh;
+  height: 100vh;
+}
+/* para pantallas muy grandes */
+@media (min-aspect-ratio: 16/9) {
+  .hero-section iframe {
+    width: 100vw;
+    height: 56.25vw;
+  }
 }
 @media screen and (max-width: 768px) {
   body,
@@ -244,6 +252,7 @@ html {
     width: 100%;
     padding-top: 56.25%;
     overflow: hidden;
+    height: auto;
   }
 
   .hero-section iframe {
@@ -537,7 +546,10 @@ html {
   grid-template-columns: repeat(14, 1fr);
   gap: 5px;
   justify-content: center;
-  margin-top: -90px;
+  margin-bottom: -90px;
+  transform: translateX(3%);
+  z-index: 2;
+  pointer-events: none;
 }
 .brown-key {
   width: auto;
@@ -561,6 +573,11 @@ html {
 .mocha-key,
 .brown-key {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 8px;
+  pointer-events: auto;
 }
 /* Espacios */
 .space {
@@ -841,6 +858,8 @@ body {
   color: #444;
   line-height: 1.2;
   margin: 0.2rem 0;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
 }
 .profes-container .card {
   width: 230px;
@@ -953,7 +972,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-top: 2rem;
 }
 
@@ -968,7 +987,16 @@ body {
 
 .drum-pad.active {
   transform: scale(1.1);
-  background: #efefef61;
+  background: #fff31026;
+}
+.buttons .drum-pad {
+  padding: 0.5rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.1s;
+  background-color: black;
 }
 /* Estilos para la sección de "Sobre la escuela" */
 .aboutus-section {
@@ -1048,8 +1076,7 @@ body {
 }
 .wrapper {
   position: relative;
-  width: 60vw;
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
 }
 .wrapper img {
