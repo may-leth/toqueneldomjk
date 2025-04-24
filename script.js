@@ -1,7 +1,6 @@
 //Funcion para desplegar menu
 function toggleMenu(element) {
   const menu = document.getElementById("menu");
-  console.log("toggleMenu se activó"); // mensaje de prueba
   menu.classList.toggle("active");
   element.classList.toggle("change");
 }
@@ -21,3 +20,10 @@ btn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+//Funcion para que el submit se haga en el formulario 
+document.getElementById("submit-form").addEventListener('submit', function(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  console.log([...data.entries()]);
+});
+

@@ -1,10 +1,3 @@
-//Funcion para desplegar menu
-function toggleMenu(element) {
-    const menu = document.getElementById("menu");
-    console.log("toggleMenu se activó") // mensaje de prueba 
-    menu.classList.toggle("active");
-    element.classList.toggle("change");
-}
 // documentación de la librería https://tonejs.github.io/
 // ejemplo: https://tonejs.github.io/examples/sampler
 // iniciamos Tone.js
