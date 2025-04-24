@@ -1,26 +1,37 @@
 // Mapeo de teclas
 const keyMap = {
   a: "kick",
-  s: "snare",
-  d: "hihat",
+  s: "hihatpie",
+  d: "hihatcerrado",
   f: "crash",
-  g: "tom1",
-  h: "tom2",
+  g: "ride",
+  h: "redoblante",
+  j: "redoblantebaquetacruzada",
+  k: "tomagudo",
+  l: "tombajo",
+  p: "tompiso",
 };
 
 // Inicializar los samples con rutas locales
-const players = new Tone.Players({
-  kick: "assets/samples/kick.mp3",
-  snare: "assets/samples/snare.mp3",
-  hihat: "assets/samples/hihat.mp3",
-  crash: "assets/samples/crash.mp3",
-  tom1: "assets/samples/tom1.mp3",
-  tom2: "assets/samples/tom2.mp3",
-}, {
-}).toDestination();
+const players = new Tone.Players(
+  {
+    kick: "assets/samples/bateria/Bombo.mp3",
+    redoblante: "assets/samples/bateria/Redoblantesonido.mp3",
+    redoblantebaquetacruzada:
+      "assets/samples/bateria/Redoblante(baqueta-cruzada).mp3",
+    hihatpie: "assets/samples/bateria/Hi-Hat(pie).mp3",
+    hihatcerrado: "assets/samples/bateria/Hi-Hat(cerrado).mp3",
+    crash: "assets/samples/bateria/Platillo-Crash.mp3",
+    ride: "assets/samples/bateria/Platillo-Ride.mp3",
+    tomagudo: "assets/samples/bateria/Tom-tom-agudo.mp3",
+    tombajo: "assets/samples/bateria/Tom-tom-bajo.mp3",
+    tompiso: "assets/samples/bateria/Tom-de-piso.mp3",
+  },
+  {}
+).toDestination();
 
 // Click en botones
-document.querySelectorAll(".drum-pad").forEach(pad => {
+document.querySelectorAll(".drum-pad").forEach((pad) => {
   pad.addEventListener("click", async () => {
     await Tone.start(); // Activa el audio
     const sound = pad.dataset.sound;
@@ -49,8 +60,4 @@ function playSound(sound) {
 function animate(pad) {
   pad.classList.add("active");
   setTimeout(() => pad.classList.remove("active"), 150);
-}
-function toggleMenu(menu) {
-  const nav = document.getElementById('menu');
-  nav.classList.toggle('active');
 }

@@ -449,7 +449,7 @@ html {
   background-color: #fff;
 }
 .title-doc {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 28px;
   font-weight: 600;
   text-align: center;
@@ -473,7 +473,7 @@ html {
 .documentacion-instrumentos br {
   margin-bottom: 10px;
   display: block;
-  content: '';
+  content: "";
 }
 .list-doc {
   margin-top: 20px;
@@ -963,15 +963,13 @@ body {
   font-size: 1.2rem;
   border: none;
   border-radius: 10px;
-  background: #c09ad0;
   color: white;
-  cursor: pointer;
   transition: transform 0.1s;
 }
 
 .drum-pad.active {
   transform: scale(1.1);
-  background: #81f59a;
+  background: #efefef61;
 }
 /* Estilos para la sección de "Sobre la escuela" */
 .aboutus-section {
@@ -1079,9 +1077,9 @@ body {
     "div13 div14 div15 div15 div19 div19 div17";
 }
 
-.container-bateria > div {
+/* .container-bateria > div {
   border: 1px solid rgba(255, 0, 0, 0.3);
-}
+} */
 
 .div1 {
   grid-area: div1;
