@@ -82,16 +82,8 @@
 
 <h3>/// 8. Instalación</h3>
 
-<h4>Opción 1: Local (sin Docker)</h4>
-<ol>
-  <li>Clona tu repositorio en Git con:<br><code>git clone https://github.com/debsrdev/toqueneldom.git</code></li>
-  <li>Entra en la carpeta del proyecto:<br><code>cd toqueneldom</code></li>
-  <li>Instala las dependencias necesarias:<br><code>npm install</code></li>
-  <li>Inicia la aplicación:<br><code>npm start</code></li>
-</ol>
-
-<h4>Opción 2: Dockerfile</h4>
-<p>Si prefieres usar Docker, crea un archivo llamado <code>Dockerfile</code> con este contenido:</p>
+<h4>Por el Dockerfile</h4>
+<p>En Docker, crea un archivo llamado <code>Dockerfile</code> con este contenido:</p>
 <pre><code>FROM nginx:alpine
 COPY . /usr/share/nginx/html
 EXPOSE 80
