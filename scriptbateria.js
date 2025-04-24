@@ -35,8 +35,16 @@ document.querySelectorAll(".drum-pad").forEach((pad) => {
   pad.addEventListener("click", async () => {
     await Tone.start(); // Activa el audio
     const sound = pad.dataset.sound;
+    if (!sound) return;
     playSound(sound);
     animate(pad);
+
+    const showInstrumentPlayed = document.querySelector(
+      `.container-bateria .drum-pad[data-sound="${sound}"]`
+    );
+    if (showInstrumentPlayed) {
+      animate(showInstrumentPlayed);
+    }
   });
 });
 
