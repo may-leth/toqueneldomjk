@@ -70,12 +70,14 @@
 <h3>/// 6. Herramientas Utilizadas</h3>
 <ul>
   <li>HTML5 semántico</li>
-  <li>CSS3 (Flexbox + Grid)</li>
+  <li>CSS3</li>
   <li>JavaScript vanilla</li>
-  <li>Web Audio API</li>
   <li>Docker</li>
-  <li>Nginx</li>
-  <li>GitFlow</li>
+  <li>Git y GitHub</li>
+  <li>DevTools</li>
+  <li>Tone.js</li>
+  <li>Google Fonts y Font Awesome</li>
+  <li>Canva</li>
 </ul>
 
 <h3>/// 8. Instalación</h3>
